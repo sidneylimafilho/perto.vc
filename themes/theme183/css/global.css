@@ -1,4 +1,13 @@
-﻿/* —————————————————————————————— clear.css —————————————————————————————— */
+﻿@media screen {	
+	@font-face {
+		font-family: 'Scriptina Pro';
+		font-style: normal;
+		font-weight: 400;
+		src: local('Scriptina Pro'), url('Scriptina Pro.woff') format('woff');
+	}
+}
+
+/* —————————————————————————————— clear.css —————————————————————————————— */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, 
 del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, 
 fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, input, textarea
@@ -94,10 +103,10 @@ div#wrapper4 {width:1040px;margin:0 auto;}
 
 #columns {width:940px;margin:0 auto;padding:10px 0 0 0;clear:both;}
 
-#center_column {width:700px;float:left;margin:0 0 -56px 0;}
-#center_column_inner {width:660px;padding:0 20px 20px 20px;float:left;background:url(../img/bg_column_title.jpg) 0 0 no-repeat #fff;}
+#center_column {float:left;margin:0 0 -56px 0;}
+#center_column_inner {padding:0 20px 20px 20px;float:left;background:url(../img/bg_column_title.jpg) 0 0 no-repeat #fff;}
 
-body#index #center_column_inner {width:700px;padding:0;background:none;}
+body#index #center_column_inner {padding:0;background:none;}
 body#index #right_column {width:220px;float:left;margin:0 0 -60px 20px;position:relative;z-index:10;}
 #right_column {width:220px;float:left;margin:0 0 -60px 20px;position:relative;z-index:10;}
 
@@ -185,11 +194,11 @@ margin:0;padding:0;border:0;outline:0;font-weight:inherit;font-style:inherit;fon
 
 /* —————————————————————————————— buttons —————————————————————————————— */
 /*
-   -tags: input, a, span
-   -sizes: mini, small, normal, large
-   -types: button, exlusive
-   -status: normal, hover, disabled
-   -rule: the span.button is a a.button disabled
+-tags: input, a, span
+-sizes: mini, small, normal, large
+-types: button, exlusive
+-status: normal, hover, disabled
+-rule: the span.button is a a.button disabled
 */
 
 /* global button */
@@ -251,7 +260,7 @@ input.button_large, input.button_large_disabled, a.button_large, span.button_lar
 /* exclusive button */
 input.exclusive_mini, input.exclusive_mini_disabled, a.exclusive_mini, span.exclusive_mini {width:50px;}
 input.exclusive_small, input.exclusive_small_disabled, a.exclusive_small, span.exclusive_small {width:65px;}
-input.exclusive, input.exclusive_disabled, a.exclusive, span.exclusive {width:115px;}
+input.exclusive, input.exclusive_disabled, a.exclusive, span.exclusive {max-width:115px;padding:0px 20px;}
 input.exclusive_large, input.exclusive_large_disabled, a.exclusive_large, span.exclusive_large {width:180px;}
 
 
@@ -721,7 +730,7 @@ div#stores_block_left p a img {margin:0 0 10px 0;}
 
 /* custom styles */
 div#homecarousel {width:1040px;height:303px;clear:both;margin:-37px 0 0 -50px;background:url(../img/homecarousel_bg.png) 50% 0 no-repeat;position:relative;z-index:10000;}
-div#homecarousel h4 {margin:0;padding:18px 83px 1px 0;font:bold 27px "Trebuchet MS";color:#fff;text-align:right;text-shadow:#3d7200 1px 1px 1px; text-transform:none; letter-spacing:-1px;}
+div#homecarousel h4 {margin:0px 81px -10px 0;font:40px "Scriptina Pro";color:#fff;text-align:right; text-shadow:/* #3d7200 */#FFF 0px 0px 1px;  text-transform:none; letter-spacing:-1px;}
 
 div.jcarousel-container {width:1040px;height:260px;}
 
@@ -760,15 +769,15 @@ ul#mycarousel ul li:hover div span.price {color:#fff;}
 
 
 /* ————— homefeatured.tpl ————— */
-div#featured-products_block_center {width:660px;margin:10px 0 0 0;padding:0 20px 20px 20px;float:left;background:url(../img/bg_column_title.jpg) 0 0 no-repeat #fff;}
-div#featured-products_block_center h4 {width:660px;height:46px;margin:0 0 0 -20px;padding:0 20px 1px 20px;font:bold 27px "Trebuchet MS";color:#fff; text-transform:none; letter-spacing:-1px; line-height:40px}
-div#featured-products_block_center ul {width:681px;padding:20px 0 0 0;list-style-type:none;overflow:hidden;}
-div#featured-products_block_center ul li {width:207px;margin:0 20px 0 0;float:left;}
+div#featured-products_block_center {width:920px;margin:20px 0 0 0;padding:0 0px 20px 20px;float:left;background:url(../img/bg_column_title.jpg) 0 0 repeat-x #fff;}
+div#featured-products_block_center h4 {height:46px;margin:-10px 0 0 -20px;padding:0 20px 1px 20px;font: 40px "Scriptina Pro";color:#fff; text-transform:none; letter-spacing:-1px; /* line-height:40px */text-shadow: maroon 1px -2px 0px;}
+div#featured-products_block_center ul {padding:20px 0 0 0;list-style-type:none;overflow:hidden;}
+div#featured-products_block_center ul li {width:210px;margin:0 20px 0 0;float:left;}
 
 div#featured-products_block_center ul li div.product_info {}
 div#featured-products_block_center ul li div.product_info h5 {padding:7px 0 0 0;}
-div#featured-products_block_center ul li a.product_image {width:205px;height:167px;display:block;border:1px solid #ebe8e8;}
-div#featured-products_block_center ul li a.product_image img {vertical-align:top;border:3px solid #fff;}
+div#featured-products_block_center ul li a.product_image {/* width:205px;height:167px; */display:block;}
+div#featured-products_block_center ul li a.product_image img {vertical-align:top;padding:3px;border:1px solid #ebe8e8;}
 
 
 div#featured-products_block_center ul li h5 {padding:13px 15px 0 0; min-height:32px;}
@@ -1512,7 +1521,7 @@ ul.shop_info li {padding-left:0.5em!important;padding-bottom:0.5em!important;}
 
 /* —————————————————————————————— footer styles —————————————————————————————— */
 div#pseudo_footer {height:114px;clear:both;background:url(../img/bg_bottom.jpg) 0 0 repeat-x;}
-div#footer {width:700px;height:79px;clear:both;background:url(../img/bg_footer.png) 0 0 no-repeat;}
+div#footer {width:940px;height:109px;clear:both;background:url(../img/bg_footer.png) 0 0 no-repeat;}
 /* ————— blockcms.tpl ————— */
 ul#footer_links {list-style-type:none;padding:17px 0 0 20px;}
 ul#footer_links  li {display:inline;margin:0 18px 0 0;}
