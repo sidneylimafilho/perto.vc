@@ -730,7 +730,7 @@ div#stores_block_left p a img {margin:0 0 10px 0;}
 
 /* custom styles */
 div#homecarousel {width:1040px;height:303px;clear:both;margin:-37px 0 0 -50px;background:url(../img/homecarousel_bg.png) 50% 0 no-repeat;position:relative;z-index:10000;}
-div#homecarousel h4 {margin:0px 81px -10px 0;font:40px "Scriptina Pro";color:#fff;text-align:right; text-shadow:/* #3d7200 */#FFF 0px 0px 1px;  text-transform:none; letter-spacing:-1px;}
+div#homecarousel h4 {margin:0px 81px -10px 0;font:40px "Scriptina Pro";color:#fff;text-align:right; text-shadow:/* #3d7200 */#FFF 0px 0px 1px;  text-transform:none; letter-spacing:-1px; padding:4px 0px;}
 
 div.jcarousel-container {width:1040px;height:260px;}
 
